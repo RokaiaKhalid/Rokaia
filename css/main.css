@@ -1,0 +1,195 @@
+/* Start Varibles */
+:root {
+	--main-color: #593010;
+	--main-color-alt: #8b3e25;
+  --socandery-color: #ffdfc4;
+	--section-background: #d19477;
+	--main-transition: 0.3s;
+	--main-padding-top: 100px;
+	--main-padding-bottom: 100px;
+  }
+/* End Varibles */
+/* Start Globals Rules */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+  scroll-behavior: smooth;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+
+    font-family: "Poppins", sans-serif;
+    position: relative;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+    color: #000;
+}
+img {
+	border-style: none;
+}
+.container{
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right:auto;
+}
+/* Small */
+@media (min-width: 768px){
+.container{
+    width: 750px;
+}
+}
+/* Medium */
+@media (min-width: 992px){
+  .container{
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px){
+  .container{
+    width: 1170px;
+  }
+}
+/* End Globals Rules */
+/* Start Header */
+header {
+	background-color: white;
+	-webkit-box-shadow: 0 0 10px #ddd;
+	-moz-box-shadow: 0 0 10px #ddd;
+    -o-box-shadow: 0 0 10px #ddd;
+    -ms-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+    padding: 10px 0;
+    position: relative;
+    box-shadow: 0 2px 3px 3px #ddd;
+}
+@media (max-width: 767px) {
+  header {
+    padding: 10px 0;
+  }
+}
+header .container {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+	color: var(--main-color);
+	font-size: 30px;
+	font-weight: bold;
+    font-style: italic;
+    padding-bottom: 5px;
+	position: relative;
+}
+header .logo::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 4px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--section-background);
+    border-radius: 10px 0;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header nav a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-color-alt);
+    position: relative;
+    transition: 0.5s;
+}
+header nav a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--socandery-color);
+    transition: width .4s;
+}
+header nav a:hover {
+  background-color: #fcf1e8;
+}
+header nav a:hover::before {
+    width: 100%;
+}
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+  background-color: #dbb9ac;
+  padding: 20px;
+}
+.landing .into {
+  text-align: center;
+}
+.landing p {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 15px;
+}
+.landing p span {
+  color:#8b3e25;
+  font-weight: bold;
+}
+.landing h2 {
+  color: var(--main-color-alt);
+  font-size: 34px;
+  margin-bottom: 20px;
+
+}
+.landing h3 {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.landing button {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 20px;
+  background-color: var(--main-color);
+  color: white;
+}
+.landing .into div {
+  padding: 20px;
+}
+.landing .into div a {
+  display: inline-block;
+  width: 40px;
+}
+.landing a i {
+  font-size: 30px;
+  color: #fff;
+}
+@media (min-width: 767px) {
+  .landing a i {
+    font-size: 20px;
+  }
+  
+}
